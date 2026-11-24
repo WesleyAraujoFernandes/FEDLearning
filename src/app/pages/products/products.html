@@ -3,8 +3,28 @@
     <h2 class="text-3xl text-orange-500 mb-10">
       📦 Products Component
     </h2>
+    <!--
     <p class="text-2xl mb-10">
       Welcome to the Products Page!
     </p>
+    -->
+    <!--     
+    <nav class="flex gap-2">
+      <a [routerLink]="['/pages/product-details',101]">Laptop</a>
+      <a [routerLink]="['/pages/product-details',102]">Mobile</a>
+      <a [routerLink]="['/pages/product-details',103]">Tablet</a>
+    </nav> 
+    -->
+    <nav class="flex gap-2">
+      <button class="bg-blue-500 text-white rounded px-3 py-1" (click)="viewDetails(101)">
+        Laptop
+      </button>
+      <button class="bg-blue-500 text-white rounded px-3 py-1" (click)="viewDetails(102)">
+        Mobile
+      </button>
+      <button class="bg-blue-500 text-white rounded px-3 py-1" (click)="viewDetails(103)">
+        Tablet
+      </button>
+    </nav>
   </div>
 </div>

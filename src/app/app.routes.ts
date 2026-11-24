@@ -5,10 +5,17 @@ import { Contact } from './pages/contact/contact';
 import { Products } from './pages/products/products';
 import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
+import { PageNotFound } from './pages/page-not-found/page-not-found';
+import { ProductDetails } from './pages/product-details/product-details';
 
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'pages/login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'pages/login',
     component: Login
   },
   {
@@ -30,5 +37,13 @@ export const routes: Routes = [
   {
     path: 'pages/products',
     component: Products
+  },
+  {
+    path: 'pages/product-details/:id',
+    component: ProductDetails
+  },
+  {
+    path: '**',
+    component: PageNotFound
   },
 ];

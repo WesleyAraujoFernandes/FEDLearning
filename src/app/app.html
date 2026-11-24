@@ -1,21 +1,20 @@
 <!-- <app-data-binding /> -->
+<div class="h-screen flex flex-col">
+  <div class="border-b-2 border-gray-500 py-4 text-center">
+    <h1 class="text-3xl text-blue-700 font-mono">My Angular 22 App</h1>
+  </div>
 
-<div class="border-b-2 border-gray-500 py-4 text-center">
-  <h1 class="text-3xl text-blue-700 font-mono">My Angular 22 App</h1>
+  <nav class="py-4 px-6">
+    <ul class="flex gap-10 font-mono text-xl">
+      <li><a routerLink="pages/home" 
+          routerLinkActive="text-green-700 font-bold"
+          [routerLinkActiveOptions]="{exact : true}">🏠 Home</a></li>
+      <li><a routerLink="pages/about" routerLinkActive="text-blue-700 font-bold">ℹ️ About</a></li>
+      <li><a routerLink="pages/contact" routerLinkActive="text-red-700 font-bold">📞 Contact</a></li>
+      <li><a routerLink="pages/products" routerLinkActive="text-orange-700 font-bold">📦 Products</a></li>
+    </ul>
+  </nav>
+  <main class="flex-1 flex flex-col overflow-hidden">
+    <router-outlet></router-outlet>
+  </main>
 </div>
-
-<nav class="py-4">
-  <ul class="flex gap-10 font-mono text-xl">
-    <li><a routerLink="pages/home">🏠 Home</a></li>
-    <li><a routerLink="pages/about">ℹ️ About</a></li>
-    <li><a routerLink="pages/contact">📞 Contact</a></li>
-    <li><a routerLink="pages/products">📦 Products</a></li>
-<!-- 
-    <li><a routerLink="/pages/products">📦 Products</a></li>
-    <li><a [routerLink]="'/pages/products'">📦 Products</a></li>
-    <li><a [routerLink]="['/pages/products']">📦 Products</a></li>
- -->    
-  </ul>
-</nav>
-
-<router-outlet></router-outlet>
